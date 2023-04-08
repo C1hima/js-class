@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Javascript</title>
+    <style>
+        body{
+            height: 100vh;
+            background-color: aquamarine;
+        }
+        h1{
+            text-align: center;
+            font-size: 2rem;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>js training</h1>
+    <script>
+    //    function sayHello(name){
+    //      const greet = `hello ${name}, how are you today`
+    //      console.log(greet)
+    //    }
+       
+    //    sayHello("chinedu")
+
+
+
+
+    // function greet(name,yearOfBirth){
+    //     const currentYear = 2023;
+    //     const age = currentYear-yearOfBirth;
+    //     const result = `hello ${name}, i understand you are ${age} years today`
+    //     console.log(result)
+    // }
+
+    // greet("chima",1997)
+
+
+
+
+
+
+
+
+
+
+
+
+    // function greet(name, yearOfBirth){
+    //     const futureYear= 2040;
+    //     const age= futureYear-yearOfBirth;
+    //     const result = `hello ${name}, you will be ${age}years by the year ${futureYear} if you are still alive`
+    //     console.log(result)
+    // }
+    // greet("chima",2000)
+
+
+
+
+    // conditional statements
+
+
+    // if(6<7){
+    //     console.log("6 is less than 7")
+    // }
+
+    // else if(6===7){
+    //     console.log("6 is equal to 7")
+    // }
+    // else{
+    //     console.log("yooolooo")
+    // }
+
+
+
+    // function giveAccess(age){
+    //     if(age<=0)
+    //         console.log("sorry we don't accept your age range")
+    //     )
+    //     if(age<=16 && age>0){
+    //         console.log("Sent to children section, watch telitubies")
+    //     }
+    //     else if(age===18){
+    //         console.log("sent to teen section,play mortal combat")
+    //     }
+    //     else if (age>18){
+    //         console.log("sent to adult sectiion!!!!!!!!")
+    //     }
+    //     else if(age===17){
+    //         console.log("we have no view for your age category")
+    //     }
+    // }
+
+    // giveAccess(0)
+
+
+// function detective(surname){
+//     const name = "ayo"
+//     if(surname===name){
+//         alert(`${surname} is the thief oooo!!`)
+//     }
+//     else{
+//         alert(`${surname} is clean`)
+//     }
+// }
+
+// detective("ayo")
+
+// function summation(num1,num2){
+//     const result=num1+num2
+//     const total=40
+//     const difference=total-result
+//     if(result<40){
+//         console.log(`you need to add ${difference} to sum it up to 40`)
+//     }
+//     if(result>40){
+//         console.log(`you need to subtract ${difference} to sum it up to 40`)
+//     }
+//     if(result===40){
+//         alert(`this is to easy,try something different`)
+//     }
+// }
+// summation(30+20)
+
+//how to reverse a number
+// function reverseANumber(n){
+// n=n + "";
+// return n.split("").reverse().join("");
+// }
+// console.log(Number(reverseANumber(23546)));
+
+// function confirmation(yearOfBirth,affirm){
+// const currentYear=2023
+// const age=currentYear-yearOfBirth
+// const acceptedAge=18
+// if(age>=acceptedAge && affirm===true){
+//     console.log(`you have access to our resources`)
+// }
+// if(age>=18 && affirm===false){
+// console.log(`you are up to 18 years but you passed afirm value of false please recheck`)
+// }
+// if(age<18 && affirm===true){
+//     console.log(`dont play smart with an AI`)
+
+// }
+// if(age<18, affirm!==false){
+//     console.log(`honesty pays, thanks for being honest, now I can give you access to tellitubies section`)
+// }
+// }
+// confirmation(2010,true)
+
+// note: one of the main use of function is code reusability
+// we have global scope, function scope and block scope.
+
+// Asignment solution 
+// write a function that accepts a name and checks if the name is up to 6 characters, if its less than 6 characters, console("less than 6 characters"), if more than 6 chars console("more than 6 chars"), else console("accepted")
+const acceptedLength = 6
+function validateName(name){
+   if(name.length>acceptedLength){
+    console.log(`${name} is ${name.length} chars and is greater than ${acceptedLength}`)
+   }
+   else if(name.length<acceptedLength){
+    console.log(`${name} is ${name.length} chars and is less than ${acceptedLength}`)
+   }
+   else{
+    console.log(`great!! ${name} is ${name.length} chars`)
+   }
+}
+
+validateName("marcu")
+
+//DAy 2
+// function
+
+// const currentYear = 2023
+// const permittedAge = 18
+// function calAge(yob){
+//     const age = currentYear- yob;
+//     return age
+    //}
+
+// function giveAcces(yearOfBirth){
+//     const age = calAge(yearOfBirth)
+//     // if(age<permittedAge){
+//     //     return false;
+//     // }
+//     // else{
+//     //     return true;
+//     // }
+//     age>permittedAge?  true:  false
+
+// }
+// const permitted = giveAcces(2015)
+// permitted?console.log("permitted"):console.log("banned")
+const acceptedNum=40
+function addNum(num1,num2){
+    return  num1+num2;
+}
+
+
+function checkPermittedAge(one,two){
+    const age= addNum(one,two)
+    let diff
+    if(age===acceptedNum){
+        return "too easy"
+    }
+    if(age>acceptedNum){
+        diff = age-acceptedNum
+        return`subtract ${diff}, to reduce it to 40 `
+    }
+    if(age<acceptedNum){
+        diff = acceptedNum-age
+        return`add ${diff},to sum it up to 40`
+    }
+}
+const permit= checkPermittedAge(40,0)
+console.log(permit)
+
+
+function confirmGrade(num1,num2){
+    const total = addNum(num1,num2)
+    total>70?alert("passed"):alert("failed")
+}
+// confirmGrade(40,2)
+
+// if(true|| false){
+//     return 6
+// }
+console.log(2=="2")
+// Day 2(logical operators)
+//logical And operator(&&)
+//logical or operator(||)
+//strict equality(===)
+//strict negation(!==)
+ //loose equality(==)
+   //loose negation(!=)
+   //greater than
+   //greater than or equal to
+   //less than 
+   //less than or equal to
+   //negation(!)
+
+
+   // write a function that accepts two numbers that are added, second function multiplies these two numbers and third function
+   //returns the difference between the addition and multiplication.
+   function addNum(num1,num2){
+    const result1=num1+num2
+    return result1
+   }
+function mulNum(one,two){
+const multiplication=addNum(one,two)
+const result2=one*two
+return result2
+}
+function checkValue(result1,result2){
+const addNum=(num1,num2)
+let diff
+if(result1>=result2){
+    diff=result1-result2
+    return `the difference is${diff}`
+}
+else if(result1<result2){
+    diff= result2-result1
+    return`difference is ${diff}`
+}
+}
+const value= checkValue(14,81)
+console.log(value)
+
+    </script>
+</body>
+</html>

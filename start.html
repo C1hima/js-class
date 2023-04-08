@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: blue;
+            height: 100vh;
+
+        }
+        h1{
+            text-align: center;
+            text-decoration: solid;
+            font-size: 200rem;
+            color: black;
+        }
+    </style>
+    </head>
+    <body>
+        <h2>JavaScript</h2>
+        <script>
+            // function addNum(num4,num9){
+            //     const result=(num4*num9)
+            //     console.log(result)
+            // }
+            // addNum(2,3)
+
+            // function sayHi(name){
+            // const pleasantries=`hello Mr ${name}, hope you are doing great? Mr ${name}`
+            // console.log(pleasantries)
+            // }
+    // sayHi("nyesoman")
+
+    // function greet(name,yearOfBirth){
+    //     const currentYear=2023;
+    //     const age= currentYear-yearOfBirth 
+    //     const result=`hello ${name}, I can see that you are ${age}years today`
+    //     console.log(result)
+    // }
+    // greet("chima",2008)
+// function permit(age){
+//    if (age<=3 && age>5){
+//     console.log("hello, welcome")
+//    }
+//    else{
+//     console.log(" sorry, wron page")
+//    }
+// }
+//    permit(4)
+//ASSIGNMENT
+
+// function summation(num1,num2){
+// const result=num1+num2
+// const total=40
+// const difference= total-result
+// if(result<total){
+//     console.log(`you have to add ${difference} to sum it up to ${total}`)
+// }
+// if(result>40){
+//     console.log(`you have to subtract ${difference} to sum it up to ${total}`)
+// }    
+//  if(result===40){
+//     alert(`this is too easy, try a different number`)
+// }
+// }
+// summation(30,20)
+// const acceptedAge= 40
+// function addNum(num1,num2){
+//     return num1+num2
+// }
+// function giveAccess(num3,num4){
+//     const age= addNum(num3,num4)
+//     let difference
+//     if(age===acceptedAge){
+//         return "too easy, try a difficult one"
+//     }
+//     if(age>acceptedAge)
+//     difference= age-acceptedAge
+//     return `subtract ${difference}, to reduce it to ${acceptedAge}`
+//      if (age<acceptedAge){
+//         difference=acceptedAge-age
+//         return `add ${difference}, to sum it up to ${acceptedAge}`
+//      }
+// }
+// const permit=giveAccess(20,20)
+// console.log(permit)
+// ASSIGNMENT ON MULTIPLYING AND ADDING TO NUMBERS AND FINDING THE DIFFERENCE BETWEEN THEM
+// function addNum(num1,num2){
+//     const result1=num1+num2
+//     return result1
+//    }
+// function mulNum(one,two){
+// const multiplication=addNum(one,two)
+// const result2=one*two
+// return result2
+// }
+// function checkValue(result1,result2){
+// const addNum=(result1,result2)
+// let diff
+// if(result1>=result2){
+//     diff=result1-result2
+//     return `the difference is${diff}`
+// }
+// else if(result1<result2){
+//     diff= result2-result1
+//     return`difference is ${diff}`
+// }
+// }
+// const value= checkValue(14,81)
+// console.log(value)
+
+// MODIFIED ASSIGNMENT 2.
+// const acceptedAge=18
+// const currentYear=2023
+// function calAge(yearOfBirth){
+//     const age=currentYear-yearOfBirth
+//     return age
+// }
+// function checkValue(affirm){
+//     const valueCheck=calAge(affirm)
+//     if(age>=acceptedAge && affirm===true){
+//         return"you have access to the resources"
+//     }
+//     if(age>=acceptedAge && affirm===false){
+//         return `you are up to ${acceptedAge} but you passed an affirm value of false, please recheck `
+//     }
+//     if(age<acceptedAge && affirm===true){
+//         return "please do not play smart with an AI"
+//     }
+//     if(age<acceptedAge && affirm===false){
+//         return "honesty pays, thanks for being honest, now I can take you to the telitubbies category!!"
+//     }
+// }
+// const permit= checkValue(true)
+// console.log(permit)
+
+
+
+
+
+//////////////////////////////////////////////////////
+// DAY 3(LOOPS)
+
+
+
+
+
+// let arr = [2,3]
+// for(let i = 1; i<20; i++){
+   
+// if(  i%2!==0 && i%3 !==0){
+//     arr.push(i)
+// }
+// }
+// console.log(arr)
+
+
+// for(let i=20;i>=1;i--){
+//     if(i%2!==0 && i%3===0){
+//         console.log(i)
+         
+//     }
+// }
+
+function divisibleBy3(num){
+    let tempArray = [];
+    for(let i = 1; i<=num; i++){
+        if(i%3===0){
+            tempArray.push(i)
+        }
+    }
+    return tempArray
+}
+const num= divisibleBy3(30)
+// console.log(num)
+
+
+
+// WHILE LOOP
+
+
+// let i = 0;
+// while(i<=20){
+//     console.log(i)
+//     i++;
+// }
+
+
+
+// CLASSWORK
+
+
+function acceptNumber(num){
+    let arr=[];
+    for(let i=1; i<num;i++){
+        if(i%3===0 && i%2===0){
+            arr.push(i)
+        }
+    }
+    return arr
+}
+const number= acceptNumber(15)
+console.log(number)
+
+
+
+
+
+
+
+        </script>
+    </body>
+    
+</html>
